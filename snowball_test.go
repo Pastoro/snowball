@@ -46,6 +46,7 @@ func Test_Stem(t *testing.T) {
 		{"anticipadas", "spanish", true, "anticip", true},
 		{"goyesca", "spanish", true, "goyesc", true},
 		{"band", "spanish", true, "band", true},
+		{"abendlichen", "german", true, "abbild", true},
 	}
 	for _, testCase := range testCases {
 		out, err := Stem(testCase.in, testCase.language, testCase.stemStopWords)
@@ -64,7 +65,6 @@ func Test_Stem(t *testing.T) {
 }
 
 // Test if the VERSION constant is correctly formatted
-//
 func Test_Version(t *testing.T) {
 	validVersionRegexp := regexp.MustCompile(`^v\d+\.\d+\.\d+$`)
 	if validVersionRegexp.MatchString(VERSION) == false {

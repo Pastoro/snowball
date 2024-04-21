@@ -12,11 +12,11 @@ func Stem(word string, stemStopWords bool) string {
 	if len(word) <= 2 || (!stemStopWords && IsStopWord(word)) {
 		return word
 	}
-
 	w := snowballword.New(word)
 	preprocess(w)
 	step1(w)
 	step2(w)
-	//step3(w)
-	return w.String()
+	step3(w)
+	removeUmlautAccent(w)
+	return strings.ToLower(w.String())
 }

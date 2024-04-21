@@ -2,7 +2,7 @@ Snowball German
 ================
 
 This package implements the German language
-[Snowball stemmer](http://snowball.tartarus.org/algorithms/german/stemmer.html).
+[Snowball stemmer](https://snowballstem.org/algorithms/german/stemmer.html).
 
 ## Implementation
 
